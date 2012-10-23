@@ -46,9 +46,10 @@ padding: 8px;
 <h3>Rock Paper Scissors</h3>
 <div class="tagline"><i>By <a href="https://plus.google.com/111734237778995429762/posts" target="_new">Richard Wooding</a></i></div>
 <div id="primaryUI">
-<input type="button" class="button" onClick="rollNumDice()" value="Rock!">
-<input type="button" class="button" onClick="rollNumDice()" value="Paper!">
-<input type="button" class="button" onClick="clearDice()" value="Scissors!">
+<input type="button" class="button" onClick="rock()" value="Rock!">
+<input type="button" class="button" onClick="paper()" value="Paper!">
+<input type="button" class="button" onClick="scissors()" value="Scissors!">
+<input type="button" class="button" onClick="random()" value="Random!">
 </div>
 <div id="preview">
 </div>
