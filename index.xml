@@ -50,7 +50,7 @@ padding: 8px;
 <input type="button" class="button" onClick="paper()" value="Paper!">
 <input type="button" class="button" onClick="scissors()" value="Scissors!">
 <input type="button" class="button" onClick="random()" value="Random!">
-|<input type="button" class="button" onClick="clear()" value="Clear">
+|<input type="button" class="button" onClick="clearOverlay()" value="Clear">
 </div>
 <div id="preview">
 </div>
@@ -83,12 +83,12 @@ Help with additional dice tiles
   var overlay;
   function move(symbol) {
      var graphic = GFX[symbol];
-     clear();
+     clearOverlay();
      var img = gapi.hangout.av.effects.createImageResource("http://rockpaperscissors.richardwooding.com/gfx/white/" + GFX[symbol]);
      overlay = img.createOverlay({'position': {'x':0, 'y':0}, 'scale' : {'magnitude': 0.5, 'reference' : gapi.hangout.av.effects.ScaleReference.HEIGHT}});
      overlay.setVisible(true);
   }
-  function clear() {
+  function clearOverlay() {
     console.log("Clearing");
      if (overlay) {
         console.log("Removing overlay");
