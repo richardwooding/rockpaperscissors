@@ -50,13 +50,13 @@ padding: 8px;
 <input type="button" class="button" onClick="paper()" value="Paper!">
 <input type="button" class="button" onClick="scissors()" value="Scissors!">
 <input type="button" class="button" onClick="random()" value="Random!">
+|<input type="button" class="button" onClick="clear()" value="Clear">
 </div>
 <div id="preview">
 </div>
 <div id="comingSoon" class="tagline">
 Coming soon
 <ul>
-   <li>More dice styles</li>
    <li>Translation into more languages</li>
 </ul>
 </div>
@@ -80,8 +80,20 @@ Help with additional dice tiles
   var PAPER = 1;
   var SCISSORS = 2;
   var GFX = ["rock.png", "paper.png", "scissors.png"];
+  var overlay;
   function move(symbol) {
-     console.log(GFX[symbol]);
+     var graphic = GFX[symbol];
+     clear();
+     var img = gapi.hangout.av.effects.createImageResource("/gfx/black" + GFX[symbol]);
+     overlay = img.createOverlay({'position': {'x':0, 'y':0}, 'scale' : {'magnitude': 0.7, 'reference' : gapi.hangout.av.effects.ScaleReference.HEIGHT}});
+     overlay.setVisible(true);
+  }
+  function clear() {
+     if (overlay) {
+        overlay.setVisible(false);
+        overlay.dispose();
+        overlay = null;
+     }
   }
   function rock() {
      move(ROCK);
