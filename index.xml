@@ -89,11 +89,14 @@ Help with additional dice tiles
      overlay.setVisible(true);
   }
   function clear() {
+    console.log("Clearing");
      if (overlay) {
+        console.log("Removing overlay");
         overlay.setVisible(false);
         overlay.dispose();
-        overlay = null;
+        overlay = false;
      }
+     console.log("Done");
   }
   function rock() {
      move(ROCK);
