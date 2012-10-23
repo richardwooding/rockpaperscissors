@@ -81,7 +81,7 @@ Help with additional dice tiles
   var SCISSORS = 2;
   var GFX = ["rock.png", "paper.png", "scissors.png"];
   function move(symbol) {
-     console.log(GFX(symbol));
+     console.log(GFX[symbol]);
   }
   function rock() {
      move(ROCK);
