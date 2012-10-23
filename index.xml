@@ -76,7 +76,27 @@ Help with additional dice tiles
 <div>
 </div>
 <script>
+  var ROCK = 0;
+  var PAPER = 1;
+  var SCISSORS = 2;
+  var GFX = ["rock.png", "paper.png", "scissors.png"];
+  function move(symbol) {
+     console.log(GFX(symbol));
+  }
+  function rock() {
+     move(ROCK);
+  }
+  function paper() {
+    move(PAPER);
+  }
+  function scissors() {
+    move(SCISSORS);
+  }
+  function random() {
+    move(Math.floor(Math.random()*3));
+  }
 function init() {
+
   // When API is ready...
   gapi.hangout.onApiReady.add(
       function(eventObj) {
