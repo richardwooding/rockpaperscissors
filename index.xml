@@ -85,7 +85,7 @@ Help with additional dice tiles
      var graphic = GFX[symbol];
      clear();
      var img = gapi.hangout.av.effects.createImageResource("/gfx/black/" + GFX[symbol]);
-     overlay = img.createOverlay({'position': {'x':0, 'y':0}, 'scale' : {'magnitude': 0.7, 'reference' : gapi.hangout.av.effects.ScaleReference.HEIGHT}});
+     overlay = img.createOverlay({'position': {'x':0, 'y':0}, 'scale' : {'magnitude': 0.33, 'reference' : gapi.hangout.av.effects.ScaleReference.HEIGHT}});
      overlay.setVisible(true);
   }
   function clear() {
